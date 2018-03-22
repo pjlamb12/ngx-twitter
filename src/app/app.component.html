@@ -1,1 +1,48 @@
-<ngx-tweet-list [tweetIds]="arr"></ngx-tweet-list>
+<app-navigation></app-navigation>
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
+			<h1 class="text-center">ngx-twitter</h1>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
+			<p>
+				<code>ngx-twitter</code> is an Angular component library that makes it easy to embed tweets in your application, using the
+				<code>https://platform.twitter.com/widgets.js</code> script. When the module is loaded, the script is loaded and the tweets are displayed after that. You can pass use a
+				single
+				<code>ngx-tweet</code> component and pass it an tweet string ID, or you can use the
+				<code>ngx-tweet-list</code> component which allows you to pass in a list of tweets, and embeds each of those.
+			</p>
+			<p>
+				You can also pass in an options object:
+			</p>
+			<pre>
+public cards: string; 		// defaults to 'hidden'
+public conversation: string; 	// defaults to 'none'
+public theme: string; 		// defaults to 'light'
+public linkColor: string; 	// defaults to '#55acee'
+public align: string; 		// defaults to 'center'
+public lang: string; 		// defaults to 'en'
+public width: number; 		// defaults to 325
+public dnt: boolean; 		// defaults to true
+			</pre>
+			<p>
+				If invalid values for any of those attributes are passed in, they will be overwritten and defaulted to the above values.
+				Below is an example of an `ngx-tweet-list` component with two tweets, embedded on the page.
+			</p>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
+			<ngx-tweet-list [tweetIds]="arr"></ngx-tweet-list>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
+			<p>
+				Go check out the repo on GitHub to submit issues or pull requests. Thanks!
+			</p>
+		</div>
+	</div>
+</div>
