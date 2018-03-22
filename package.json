@@ -1,6 +1,6 @@
 {
 	"name": "ngx-twitter",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"maintainers": ["Preston Lamb"],
 	"repository": {
@@ -12,6 +12,7 @@
 		"name": "Preston Lamb",
 		"url": "https://www.prestonlamb.com"
 	},
+	"keywords": ["angular", "twitter", "tweets"],
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
