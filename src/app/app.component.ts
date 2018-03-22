@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	public arr: string[] = ['850007368138018817', '976335970202038273', '931765309022670849'];
+	public arr: string[] = ['850007368138018817', '848930551989915648'];
 }
