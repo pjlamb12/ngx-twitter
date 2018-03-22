@@ -1,27 +1,25 @@
-# NgxTwitter
+# ngx-twitter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+`ngx-twitter` is an Angular component library that takes a Twitter tweet ID and uses the Twitter embedded script to embed the tweet in your page. For now, the components are:
 
-## Development server
+*   `tweet`, which embeds a single tweet in the page
+*   `tweet-list`, which takes a list of IDs and loops over it and embeds each as a `tweet` component
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+When the module loads, it loads the `https://platform.twitter.com/widgets.js` script, and then when it's ready the tweets will be embedded in the page.
 
-## Code scaffolding
+When using either `tweet` or `tweet-list`, there is an optional `options` object that can be passed in. The options class has the following attributes:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+public cards: string; 		// defaults to 'hidden'
+public conversation: string; 	// defaults to 'none'
+public theme: string; 		// defaults to 'light'
+public linkColor: string; 	// defaults to '#55acee'
+public align: string; 		// defaults to 'center'
+public lang: string; 		// defaults to 'en'
+public width: number; 		// defaults to 325
+public dnt: boolean; 		// defaults to true
+```
 
-## Build
+When the options are passed in to the script to embed the tweet, it looks at each attribute, and if an invalid option value is passed in, it defaults to the above values.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+In future releases, Embedded Timelines, Moments, Direct Messages, and others will be implemented as well. If you'd like to contribute, submit an issue or a PR with the desired additions.
