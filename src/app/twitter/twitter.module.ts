@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { TweetComponent } from './tweet/tweet.component';
-import { TimelineComponent } from './timeline/timeline.component';
+import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { TwttrService } from './twttr.service';
 
 @NgModule({
 	imports: [CommonModule, HttpClientModule],
-	declarations: [TweetComponent, TimelineComponent],
-	exports: [TweetComponent, TimelineComponent],
+	declarations: [TweetComponent, TweetListComponent],
+	exports: [TweetComponent, TweetListComponent],
 	providers: [TwttrService],
 })
 export class TwitterModule {

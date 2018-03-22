@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	public arr: string[] = ['850007368138018817', '976335970202038273', '931765309022670849'];
-
-	addToArr() {
-		this.arr.push(1);
-	}
 }
