@@ -1,4 +1,5 @@
 import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { EmbeddedTweetOptions } from '../classes/embedded-tweet-options';
 declare const twttr: any;
 
 @Component({
@@ -8,6 +9,7 @@ declare const twttr: any;
 })
 export class TweetComponent implements AfterViewInit {
 	@Input() tweetId: string;
+	@Input() options: EmbeddedTweetOptions = new EmbeddedTweetOptions();
 	@ViewChild('tweet') tweet: ElementRef;
 	public embeddedTweet: any;
 
@@ -15,7 +17,7 @@ export class TweetComponent implements AfterViewInit {
 
 	ngAfterViewInit() {
 		window['twttr'].ready(twttr => {
-			twttr.widgets.createTweet(this.tweetId, this.tweet.nativeElement);
+			twttr.widgets.createTweet(this.tweetId, this.tweet.nativeElement, this.options.formatForOptions());
 		});
 	}
 }
